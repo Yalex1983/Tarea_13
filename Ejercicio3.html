@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <title>Ejercicio 3.html</title>
+    <meta name='author' content='Yehier Alexander'>
+    <meta name='keywords' content='html, jsx'>
+  </head>
+  <body>
+        <div id="root">
+        <!--Render code React-js-->
+        </div>
+
+                <!-- Cargar React. -->
+                <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+                <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+                <!-- Cargamos nuestro componente de React. -->
+        <script type="text/babel">
+            // 0. guardado de datos simple
+            const text = {
+            nombre: "Yehier Alexander",
+            universidad:"Universidad de manizales",
+            enlaces: "Enlaces favoritos",
+            fecha: "Mayo 2022.",
+          
+            }
+            const enlaces = {
+                enlace1: "Internet",
+                enlace2: "Google",
+                enlace3: "Aldea global",
+                enlace4: "Manual HTML",
+            }
+            const ingredientes = {
+            }
+
+            const element = (
+            <div>
+                <h1>Pagina inicial de {text.nombre}</h1>
+                <p>Bienvenido a mi pagina personal. Soy un alumno de la {text.universidad} y esta es mi página inicial, con la lista de mis enlaces favoritos y otra información de mi interés</p>
+                <h3>{text.enlaces}</h3>
+                <p>1 {enlaces.enlace1} </p>
+                <a href="https://www.google.com/">2 {enlaces.enlace2} </a>
+                <p>3 {enlaces.enlace3} </p>
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/a">4 {enlaces.enlace4} </a>
+                <h6><em>{text.nombre},  {text.universidad},  {text.fecha}</em></h6>
+            </div>
+            );
+            // Renderiamos o pintamos
+            ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+            );
+        </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <title>Ejercicio 6.html</title>
+    <meta name='author' content='Yehier Alexander'>
+    <meta name='keywords' content='html, jsx'>
+  </head>
+  <body>
+        <div id="root">
+        <!--Render code React-js-->
+        </div>
+
+                <!-- Cargar React. -->
+                <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+                <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+                <!-- Cargamos nuestro componente de React. -->
+        <script type="text/babel">
+            const ColoredLine = ({ color }) => (
+                <hr
+                    style={{
+                        color: color,
+                        backgroundColor: color,
+                        height: 1
+                    }}
+                />
+            );
+
+            const text = {
+            title1: "El Noticiero Next University",
+            title2: "Programas de Tecnología",
+            title3: "Desarrollador Web",
+            title4: "Android",
+            title5: "Programa de Negocio",
+            title6: "Mercadeo Digital",
+            
+            }
+
+            const enlaces = {
+                parrafo1: "lanza su programa de formación",
+                parrafo2: "con la finalidad de capacitar a personas en las tendencias actuales sobre tecnologias, en el caso de desarrollo web, se basa temas relacionados a la implementación de Front-End con tecnologías y Frameworks, tales como:",
+                parrafo3: "que te da las herramientas necesarias para diseñar e implementar aplicaciones Android para dispositivos móviles, partiendo de un conocimiento básico de",
+                parrafo4: "Aprenderás los aspectos fundamentales para crear aplicaciones Android. interactivas, dinámicas y exitosas utilizando técnicas para el manejo de los recursos, datos, segundos planos, localización, sensores, animaciones, gráficos, multimedia y monetización.",
+                parrafo5: "Sabías que... Mercadeo Digital o Digital Marketing es mucho más que hacer y publicar anuncios. Se trata del consumidor y la estrategia de negocio. Estos son los puntos de partida para que cualquier acción de mercadeo digital",
+                parrafo6: "Este certificado, es un programa completo y práctico, que permite entender al consumidor, la industria, la competencia y los retos del negocio propio: para crear e implementar estrategias a la medida, en diferentes plataformas y medios digitales. Por supuesto, monitoreando los resultados para tomar decisiones en tiempo real",
+            }
+            const vinetas = {
+                vin1:"charkes",
+                vin2:"low",
+                vin3:"tim", 
+            }
+
+
+            const element = (
+            <div>
+              <h1>{text.title1}</h1>
+              <h2>{text.title2}</h2>
+              <h4>{text.title3}</h4>
+              <p><b><em>Next University</em></b> {enlaces.parrafo1} <b>"Desarrollador Web"</b> {enlaces.parrafo2} <em>HTML5,CSS. JavaScript, Boostrap, entre otros.</em> </p>
+              <h4>{text.title4}</h4>
+              <p> En <b><em>Next University</em></b> te ofrecemos el programa <b>Android</b> {enlaces.parrafo3} <em> Java,</em> utilizando el entorno de desarrollo <em>Android Studio.</em> {enlaces.parrafo4}</p>
+              <h2>{text.title5}</h2>
+              <h4>{text.title6}</h4>
+              <p><b><em>Next University</em></b> coloca a tu disposición el porgrama de <b>"Mercadeo Digital"</b> {enlaces.parrafo5} <em>sea exitosa y optimice la inversión.</em> {enlaces.parrafo6}</p>
+
+            </div>
+            );
+            // Renderiamos o pintamos
+            ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+            );
+        </script>
+  </body>
+</html>

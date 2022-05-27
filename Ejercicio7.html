@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <title>Ejercicio 7.html</title>
+    <meta name='author' content='Yehier Alexander'>
+    <meta name='keywords' content='html, jsx'>
+  </head>
+  <body>
+        <div id="root">
+        <!--Render code React-js-->
+        </div>
+
+                <!-- Cargar React. -->
+                <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+                <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+                <!-- Cargamos nuestro componente de React. -->
+        <script type="text/babel">
+            // 0. guardado de datos simple
+            const ColoredLine = ({ color }) => (
+                <hr
+                    style={{
+                        color: color,
+                        backgroundColor: color,
+                        height: 1
+                    }}
+                />
+            );
+
+            const text = {
+            title1: "Destinos Turísticos",
+            title2: "América",
+            title3: "Argentina",
+            title4: "Brasil",
+            title5: "Chile",
+            title6: "Colombia",
+            title7: "Estados unidos",
+            title8: "México",
+            title9: "Perú",
+            title10: "Venezuela",
+            }
+
+            const ciudades = {
+               city1: "Buenos Aires",
+               city2: "Bariloche",
+               city3: "Rio de Janeiro",
+               city4: "Brasilia",
+               city5: "Santiago",
+               city6: "Valparaiso",
+               city7: "Bogotá",
+               city8: "Cartagena de Indias",
+               city9: "New York",
+               city10: "San Francisco",
+               city11: "Cancún",
+               city12: "Acapulco",
+               city13: "Lima",
+               city14: "Cuzco",
+               city15: "Margarita",
+               city16: "Mérida",
+             
+            }
+            const element = (
+            <div>
+              <h1>{text.title1}</h1>
+              <h2>{text.title2}</h2>
+              <ol>
+                <li><b>{text.title3}</b></li>
+                <ol>
+                  <li><em>{ciudades.city1}</em></li>
+                  <li><em>{ciudades.city2}</em></li>
+                </ol>
+                <li><b>{text.title4}</b></li>
+                <ol>
+                  <li><em>{ciudades.city3}</em></li>
+                  <li><em>{ciudades.city4}</em></li>
+                </ol>
+                <li><b>{text.title5}</b></li>
+                <ol>
+                  <li><em>{ciudades.city6}</em></li>
+                  <li><em>{ciudades.city7}</em></li>
+                </ol>
+                <li><b>{text.title6}</b></li>
+                <ol>
+                  <li><em>{ciudades.city7}</em></li>
+                  <li><em>{ciudades.city8}</em></li>
+                </ol>
+                <li><b>{text.title7}</b></li>
+                <ol>
+                  <li><em>{ciudades.city9}</em></li>
+                  <li><em>{ciudades.city10}</em></li>
+                </ol>
+                <li><b>{text.title8}</b></li>
+                <ol>
+                  <li><em>{ciudades.city11}</em></li>
+                  <li><em>{ciudades.city12}</em></li>
+                </ol>
+                <li><b>{text.title9}</b></li>
+                <ol>
+                  <li><em>{ciudades.city13}</em></li>
+                  <li><em>{ciudades.city14}</em></li>
+                </ol>
+                <li><b>{text.title10}</b></li>
+                <ol>
+                  <li><em>{ciudades.city15}</em></li>
+                  <li><em>{ciudades.city16}</em></li>
+                </ol>
+              </ol>
+
+            </div>
+            );
+            // Renderiamos o pintamos
+            ReactDOM.render(
+            element,// estructura jsx para pintar
+            document.getElementById('root')// elemento donde se pintara
+            );
+        </script>
+  </body>
+</html>
